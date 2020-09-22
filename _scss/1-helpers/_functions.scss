@@ -1,0 +1,19 @@
+// Keep Sass from turning all the colors to hex.
+@function real-rgba($color : black, $alpha : 1.0) {
+  @return unquote("rgba(#{red($color)}, #{green($color)}, #{blue($color)}, #{$alpha})");
+}
+
+// Grab selected SVG icon for background image with desired color inserted into SVG data URIs
+@function bg-img-svg($name : 'error', $fill : 'black', $alpha : 1.0) {
+  @if ( $name == 'sel-arrow' ) {
+
+    @return(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#{real-rgba($fill,$alpha)}"><path d="M4.002 6L8 11.332 11.998 6z" opacity=".2"/><path d="M2 5l.6.801L8 13l6-8zm2.002 1h7.996L8 11.334z"/></svg>'));
+
+  } @else if( $name == 'check' ) {
+
+    @return(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#{real-rgba($fill,$alpha)}"><path d="M11.94 3.938L7 8.874l-1.94-1.94-2.12 2.124L7 13.116l7.06-7.058z"/></svg>'));
+
+  } @else {
+    @return();
+  }
+}
