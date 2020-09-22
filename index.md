@@ -178,13 +178,13 @@ css: true
   </div>
 </section>
 
-<audio data-sound="c-up" src="/assets/audio/c-up.wav"></audio>
-<audio data-sound="c-right" src="/assets/audio/c-right.wav"></audio>
-<audio data-sound="c-down" src="/assets/audio/c-down.wav"></audio>
-<audio data-sound="c-left" src="/assets/audio/c-left.wav"></audio>
-<audio data-sound="a-btn" src="/assets/audio/a.wav"></audio>
-<audio data-sound="success" src="/assets/audio/success.wav"></audio>
-<audio data-sound="error" src="/assets/audio/error.wav"></audio>
-<audio data-sound="reset" src="/assets/audio/reset.wav"></audio>
+<audio data-sound="c-up" src="{{ '/assets/audio/c-up.wav' | relative-url }}"></audio>
+<audio data-sound="c-right" src="{{ '/assets/audio/c-right.wav' | relative-url }}"></audio>
+<audio data-sound="c-down" src="{{ '/assets/audio/c-down.wav' | relative-url }}"></audio>
+<audio data-sound="c-left" src="{{ '/assets/audio/c-left.wav' | relative-url }}"></audio>
+<audio data-sound="a-btn" src="{{ '/assets/audio/a.wav' | relative-url }}"></audio>
+<audio data-sound="success" src="{{ '/assets/audio/success.wav' | relative-url }}"></audio>
+<audio data-sound="error" src="{{ '/assets/audio/error.wav' | relative-url }}"></audio>
+<audio data-sound="reset" src="{{ '/assets/audio/reset.wav' | relative-url }}"></audio>
 
-<script src="{{ '/assets/scripts/ocarina.js' }}"></script>
+<script src="{{ '/assets/scripts/ocarina.js' | relative-url }}"></script>
